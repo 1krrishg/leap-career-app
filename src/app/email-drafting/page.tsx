@@ -404,7 +404,7 @@ export default function EmailDraftingPage() {
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Professional Email Drafting</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Create professional emails for every stage of your job search journey. From cover letters to follow-ups, we've got you covered.
+            Create professional emails for every stage of your job search journey. From cover letters to follow-ups, we&apos;ve got you covered.
           </p>
         </div>
 

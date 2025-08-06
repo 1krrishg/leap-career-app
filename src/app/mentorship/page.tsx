@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+
 // Using Unicode symbols instead of Heroicons for now
 
 interface Mentor {
@@ -48,7 +48,7 @@ const testimonials = [
 export default function MentorshipPage() {
   const [mentors, setMentors] = useState<Mentor[]>([]);
   const [filteredMentors, setFilteredMentors] = useState<Mentor[]>([]);
-  const [selectedMentor, setSelectedMentor] = useState<Mentor | null>(null);
+  const [selectedMentor] = useState<Mentor | null>(null);
   const [showConnectModal, setShowConnectModal] = useState(false);
   const [connectForm, setConnectForm] = useState({
     name: '',
@@ -84,7 +84,7 @@ export default function MentorshipPage() {
   }, []);
 
   useEffect(() => {
-    let filtered = mentors.filter(mentor => {
+    const filtered = mentors.filter(mentor => {
       const matchesSearch = mentor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            mentor.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            mentor.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -103,7 +103,7 @@ export default function MentorshipPage() {
 
   const allSpecialties = ['All', ...Array.from(new Set(mentors.flatMap(mentor => mentor.specialties)))];
 
-  const handleConnect = (mentor: Mentor) => {
+  const handleConnect = () => {
     // Redirect to WhatsApp for all mentor connections
     window.open('https://wa.me/+9779813078299', '_blank');
   };
@@ -134,7 +134,7 @@ export default function MentorshipPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 backdrop-blur-sm mb-6">
               <span className="text-lg mr-2">✨</span>
-              <span className="text-sm font-medium">Leap's Unique Advantage</span>
+              <span className="text-sm font-medium">Leap&apos;s Unique Advantage</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Find Your Perfect
@@ -294,7 +294,7 @@ export default function MentorshipPage() {
 
                 {/* Connect Button */}
                 <button
-                  onClick={() => handleConnect(mentor)}
+                  onClick={handleConnect}
                   className={`w-full font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform ${
                     mentor.featured
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
@@ -329,7 +329,7 @@ export default function MentorshipPage() {
                     <span key={i} className="text-sm">⭐</span>
                   ))}
                 </div>
-                <p className="text-gray-700 text-sm italic">"{testimonial.content}"</p>
+                <p className="text-gray-700 text-sm italic">&quot;{testimonial.content}&quot;</p>
               </div>
             ))}
           </div>

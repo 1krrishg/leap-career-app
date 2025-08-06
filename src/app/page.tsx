@@ -33,14 +33,11 @@ const IconComponent = ({ iconName, className = "w-6 h-6" }: { iconName: string; 
 };
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
+
   const [activeStage, setActiveStage] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scroll = window.scrollY;
-      setScrollY(scroll);
-      
       // Calculate active stage based on scroll position
       const stagesSection = document.getElementById('stages-section');
       if (stagesSection) {

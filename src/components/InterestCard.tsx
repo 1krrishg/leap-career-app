@@ -27,7 +27,6 @@ export default function InterestCard({ onClose, className = '' }: InterestCardPr
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Store form data in localStorage for demo purposes
-    const existingData = localStorage.getItem('userInterestProfile');
     const timestamp = new Date().toISOString();
     const dataToStore = {
       ...formData,
@@ -41,13 +40,13 @@ export default function InterestCard({ onClose, className = '' }: InterestCardPr
     // Hide after 3 seconds
     setTimeout(() => {
       setIsVisible(false);
-      onClose && onClose();
+      if (onClose) onClose();
     }, 3000);
   };
 
   const handleDismiss = () => {
     setIsVisible(false);
-    onClose && onClose();
+    if (onClose) onClose();
   };
 
   if (!isVisible) {
@@ -61,7 +60,7 @@ export default function InterestCard({ onClose, className = '' }: InterestCardPr
           <div className="text-3xl mb-2">🚀</div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Thanks for your interest!</h3>
           <p className="text-sm text-gray-600">
-            We'll keep you updated on new features and opportunities.
+            We&apos;ll keep you updated on new features and opportunities.
           </p>
         </div>
       </div>

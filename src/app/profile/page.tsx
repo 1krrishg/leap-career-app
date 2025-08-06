@@ -50,8 +50,8 @@ export default function InterestFormPage() {
             <div className="text-6xl mb-4">🚀</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h1>
             <p className="text-gray-600 mb-6">
-              We've received your information and we're excited about your interest in Leap! 
-              We'll be in touch soon with updates and opportunities.
+              We&apos;ve received your information and we&apos;re excited about your interest in Leap! 
+              We&apos;ll be in touch soon with updates and opportunities.
             </p>
             <div className="space-y-3">
               <button
@@ -78,11 +78,11 @@ export default function InterestFormPage() {
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Interested in Leap?</h1>
           <p className="text-gray-600 mb-4">
-            Share your background with us and we'll keep you updated on new features, opportunities, and how Leap can help accelerate your career.
+            Share your background with us and we&apos;ll keep you updated on new features, opportunities, and how Leap can help accelerate your career.
           </p>
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
             <p className="text-sm text-yellow-800">
-              📝 <strong>This form is completely optional!</strong> You can skip it and still access all of Leap's features.
+              📝 <strong>This form is completely optional!</strong> You can skip it and still access all of Leap&apos;s features.
             </p>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function InterestFormPage() {
         {/* Footer Note */}
         <div className="text-center mt-6">
           <p className="text-sm text-gray-500">
-            By submitting this form, you agree to receive updates about Leap's features and opportunities. 
+            By submitting this form, you agree to receive updates about Leap&apos;s features and opportunities. 
             You can unsubscribe at any time.
           </p>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { 
   ComputerDesktopIcon,
@@ -676,7 +676,7 @@ export default function JobsPage() {
             ← Back to Master Menu
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Your Career Story</h1>
-          <p className="text-gray-600">Let's discover where your journey leads</p>
+          <p className="text-gray-600">Let&apos;s discover where your journey leads</p>
         </div>
 
         {!showResults ? (
@@ -699,12 +699,12 @@ export default function JobsPage() {
             {/* Current Question */}
             <div className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">{currentStepData?.question}</h2>
-              <p className="text-gray-600 mb-6 italic">"{currentStepData?.story}"</p>
+              <p className="text-gray-600 mb-6 italic">&quot;{currentStepData?.story}&quot;</p>
               
               {/* Story Response */}
               {currentStory && (
                 <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border-l-4 border-blue-500">
-                  <p className="text-gray-700 italic">"{currentStory}"</p>
+                  <p className="text-gray-700 italic">&quot;{currentStory}&quot;</p>
                 </div>
               )}
             </div>
@@ -753,8 +753,8 @@ export default function JobsPage() {
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Career Story</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Based on your answers, we've discovered the perfect career paths that align with your personality, 
-                work style, and aspirations. Here are the roles where you're most likely to thrive and find fulfillment.
+                Based on your answers, we&apos;ve discovered the perfect career paths that align with your personality, 
+                work style, and aspirations. Here are the roles where you&apos;re most likely to thrive and find fulfillment.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -771,7 +771,7 @@ export default function JobsPage() {
                     </div>
                     
                     <div className="mb-4">
-                      <p className="text-gray-700 italic">"{path.story}"</p>
+                      <p className="text-gray-700 italic">&quot;{path.story}&quot;</p>
                     </div>
                     
                     <div className="space-y-3">
@@ -807,7 +807,7 @@ export default function JobsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Job Search Platforms</h2>
               <p className="text-lg text-gray-700 mb-8">
                 Now that we know your path, here are the best platforms to find opportunities in your chosen field. 
-                We're not a job search app - we're your guide to knowing where to look.
+                We&apos;re not a job search app - we&apos;re your guide to knowing where to look.
               </p>
               
               {/* Recommended Platforms for Your Path */}

@@ -551,7 +551,7 @@ Leadership, Problem Solving, Communication, Team Collaboration, Time Management,
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">📄</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Ready to Analyze Your CV</h3>
-                <p className="text-gray-600">Upload your CV and click "Analyze CV" to get comprehensive feedback</p>
+                <p className="text-gray-600">Upload your CV and click &quot;Analyze CV&quot; to get comprehensive feedback</p>
                 </div>
               )}
             </div>
@@ -575,7 +575,7 @@ Leadership, Problem Solving, Communication, Team Collaboration, Time Management,
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">❌ Common Mistakes</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Using generic phrases like "team player"</li>
+                <li>• Using generic phrases like &quot;team player&quot;</li>
                 <li>• Including irrelevant personal information</li>
                 <li>• Making it too long or too short</li>
                 <li>• Using passive voice</li>

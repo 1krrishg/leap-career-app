@@ -530,7 +530,7 @@ export default function ApplicationTrackerPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
                     <div className="text-left">
                       <p className="font-medium mb-2">📊 Track Everything</p>
-                      <p>Log every application, even the ones you think won't work out. Data helps you improve.</p>
+                      <p>Log every application, even the ones you think won&apos;t work out. Data helps you improve.</p>
                     </div>
                     <div className="text-left">
                       <p className="font-medium mb-2">📞 Follow Up</p>
@@ -750,7 +750,7 @@ function ApplicationCard({
         <div className="mt-3 pt-3 border-t border-gray-100">
           <div className="text-xs text-gray-500 mb-2">Interview Progress:</div>
           <div className="flex space-x-1">
-            {application.interviews.map((interview, index) => (
+            {application.interviews.map((interview) => (
               <div
                 key={interview.id}
                 className={`w-3 h-3 rounded-full ${

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 interface CVData {
@@ -43,14 +43,7 @@ interface CVData {
   }>;
 }
 
-interface CoverLetterData {
-  recipientName: string;
-  company: string;
-  position: string;
-  yourName: string;
-  content: string;
-  jobDescription?: string;
-}
+
 
 interface CVAnalysis {
   atsScore: number;
@@ -126,22 +119,14 @@ export default function CVGeneratorPage() {
     skills: { technical: [], soft: [] }
   });
 
-  const [coverLetterData, setCoverLetterData] = useState<CoverLetterData>({
-    recipientName: '',
-    company: '',
-    position: '',
-    yourName: '',
-    content: ''
-  });
-
   const [generatedCV, setGeneratedCV] = useState('');
-  const [generatedCoverLetter, setGeneratedCoverLetter] = useState('');
+
   const [cvAnalysis, setCvAnalysis] = useState<CVAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [jobType, setJobType] = useState('software-engineer');
   const [cvText, setCvText] = useState('');
 
-  const handleCVInputChange = (section: keyof CVData, field: string, value: any, index?: number) => {
+  const handleCVInputChange = (section: keyof CVData, field: string, value: string, index?: number) => {
     setCvData(prev => {
       if (section === 'experience' && typeof index === 'number') {
         const newExperience = [...prev.experience];
@@ -175,12 +160,7 @@ export default function CVGeneratorPage() {
     }));
   };
 
-  const addEducation = () => {
-    setCvData(prev => ({
-      ...prev,
-      education: [...prev.education, { degree: '', institution: '', year: '' }]
-    }));
-  };
+
 
   const generateCV = () => {
     const cv = `
@@ -228,21 +208,6 @@ ${cvData.certifications.map(cert =>
     setGeneratedCV(cv);
   };
 
-  const generateCoverLetter = () => {
-    const letter = `
-${coverLetterData.yourName}
-${coverLetterData.recipientName}
-${coverLetterData.company}
-
-Dear ${coverLetterData.recipientName},
-
-${coverLetterData.content}
-
-Sincerely,
-${coverLetterData.yourName}
-    `.trim();
-    setGeneratedCoverLetter(letter);
-  };
 
   const analyzeCV = async () => {
     if (!cvText.trim()) {
@@ -516,7 +481,7 @@ ${cvAnalysis.missingKeywords.slice(0, 5).join(', ')}
                 </div>
               ) : (
                 <div className="bg-gray-50 rounded-lg p-6 h-96 flex items-center justify-center">
-                  <p className="text-gray-500 text-center">Fill in the form and click "Generate CV" to see your CV here</p>
+                  <p className="text-gray-500 text-center">Fill in the form and click &quot;Generate CV&quot; to see your CV here</p>
                 </div>
               )}
             </div>
@@ -661,7 +626,7 @@ ${cvAnalysis.missingKeywords.slice(0, 5).join(', ')}
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🔍</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Ready to Analyze</h3>
-                  <p className="text-gray-600">Paste your CV and click "Analyze CV with AI" to get started</p>
+                  <p className="text-gray-600">Paste your CV and click &quot;Analyze CV with AI&quot; to get started</p>
                 </div>
               )}
             </div>
