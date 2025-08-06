@@ -172,7 +172,7 @@ export default function Home() {
                     : 'opacity-0 transform translate-y-8'
                 }`}
               >
-                <div className="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="bg-black bg-opacity-70 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-30 shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-center space-x-8">
                     {/* Icon */}
                     <div className={`w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ${
@@ -206,25 +206,25 @@ export default function Home() {
         <div className="mt-20 w-full max-w-5xl">
           <h3 className="font-display text-2xl font-semibold text-white mb-8 tracking-wide">Explore Our Features</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <Link href="/jobs" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+            <Link href="/jobs" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="BriefcaseIcon" className="w-8 h-8 text-white mb-3" />
-              <p className="font-body text-white text-sm font-medium tracking-wide">Job Matching</p>
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Job Matching</p>
             </Link>
-            <Link href="/cv-checker" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+            <Link href="/cv-checker" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="DocumentTextIcon" className="w-8 h-8 text-white mb-3" />
-              <p className="font-body text-white text-sm font-medium tracking-wide">CV Checker</p>
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">CV Checker</p>
             </Link>
-            <Link href="/interview-prep" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+            <Link href="/interview-prep" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="TagIcon" className="w-8 h-8 text-white mb-3" />
-              <p className="font-body text-white text-sm font-medium tracking-wide">Interview Prep</p>
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Interview Prep</p>
             </Link>
-            <Link href="/application-tracker" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+            <Link href="/application-tracker" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="ChartBarIcon" className="w-8 h-8 text-white mb-3" />
-              <p className="font-body text-white text-sm font-medium tracking-wide">Application Tracker</p>
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Application Tracker</p>
             </Link>
-            <Link href="/mentorship" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+            <Link href="/mentorship" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="HandRaisedIcon" className="w-8 h-8 text-white mb-3" />
-              <p className="font-body text-white text-sm font-medium tracking-wide">Mentorship</p>
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Mentorship</p>
             </Link>
           </div>
         </div>

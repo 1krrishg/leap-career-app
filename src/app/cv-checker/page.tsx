@@ -307,28 +307,28 @@ Leadership, Problem Solving, Communication, Team Collaboration, Time Management,
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <Link href="/master" className="text-blue-600 hover:text-blue-800 font-medium mb-4 inline-block">
+        <div className="text-center mb-12">
+          <Link href="/master" className="text-blue-600 hover:text-blue-800 font-medium mb-6 inline-block text-lg transition-colors duration-200">
             ← Back to Master Menu
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Professional CV Analyzer</h1>
-          <p className="text-gray-600">Upload your CV and get comprehensive analysis for better job applications</p>
+          <h1 className="text-5xl font-bold text-black mb-4 leading-tight">Professional CV Analyzer</h1>
+          <p className="text-xl text-gray-800 leading-relaxed">Upload your CV and get comprehensive analysis for better job applications</p>
         </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Upload Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Upload Your CV</h2>
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-3xl font-semibold text-black mb-8 leading-tight">Upload Your CV</h2>
               
             <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                     Job Type
                   </label>
                   <select
                     value={jobType}
                     onChange={(e) => setJobType(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
                   >
                     <option value="software-engineer">Software Engineer</option>
                     <option value="data-scientist">Data Scientist</option>
@@ -340,13 +340,13 @@ Leadership, Problem Solving, Communication, Team Collaboration, Time Management,
 
               {/* File Upload */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-black mb-2">
                   Upload CV (PDF)
                   </label>
                 <div
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
-                  className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors cursor-pointer"
+                  className="border-2 border-dashed border-gray-400 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer bg-gray-50"
                   onClick={() => fileInputRef.current?.click()}
                 >
                   <div className="text-4xl mb-4">📄</div>
@@ -357,8 +357,8 @@ Leadership, Problem Solving, Communication, Team Collaboration, Time Management,
                     </div>
                   ) : (
                     <div>
-                      <p className="text-gray-600 mb-2">Drag and drop your CV here</p>
-                      <p className="text-sm text-gray-500">or click to browse</p>
+                      <p className="text-gray-800 mb-2">Drag and drop your CV here</p>
+                      <p className="text-sm text-gray-600">or click to browse</p>
                     </div>
                   )}
                   <input

@@ -402,8 +402,8 @@ export default function EmailDraftingPage() {
           <Link href="/master" className="text-blue-600 hover:text-blue-800 font-medium mb-4 inline-block">
             ← Back to Master Menu
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Professional Email Drafting</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-black mb-2">Professional Email Drafting</h1>
+          <p className="text-gray-800 max-w-2xl mx-auto">
             Create professional emails for every stage of your job search journey. From cover letters to follow-ups, we&apos;ve got you covered.
           </p>
         </div>
@@ -412,7 +412,7 @@ export default function EmailDraftingPage() {
           {/* Template Selection */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl shadow-xl p-6 sticky top-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Email Templates</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4">Email Templates</h2>
               
               {/* Category Filter */}
               <div className="mb-4">
@@ -448,8 +448,8 @@ export default function EmailDraftingPage() {
                     <div className="flex items-center space-x-3">
                       <div className="text-2xl">{template.icon}</div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900">{template.title}</h3>
-                        <p className="text-sm text-gray-600">{template.description}</p>
+                        <h3 className="font-semibold text-black">{template.title}</h3>
+                        <p className="text-sm text-gray-800">{template.description}</p>
                         <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
                           {template.category}
                         </span>
@@ -471,8 +471,8 @@ export default function EmailDraftingPage() {
                     <div className="flex items-center space-x-3">
                       <div className="text-3xl">{selectedTemplate.icon}</div>
                       <div>
-                        <h2 className="text-2xl font-semibold text-gray-900">{selectedTemplate.title}</h2>
-                        <p className="text-gray-600">{selectedTemplate.description}</p>
+                        <h2 className="text-2xl font-semibold text-black">{selectedTemplate.title}</h2>
+                        <p className="text-gray-800">{selectedTemplate.description}</p>
                       </div>
                     </div>
                     <button
@@ -496,7 +496,7 @@ export default function EmailDraftingPage() {
 
                 {/* Customization Form */}
                 <div className="bg-white rounded-2xl shadow-xl p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Customize Your Email</h3>
+                  <h3 className="text-xl font-semibold text-black mb-4">Customize Your Email</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {Object.entries(selectedTemplate.placeholders).map(([placeholder, description]) => (
                       <div key={placeholder}>

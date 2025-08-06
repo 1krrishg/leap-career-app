@@ -33,13 +33,6 @@ const menuItems = [
     color: "from-green-500 to-green-600"
   },
   {
-    title: "Email Drafting",
-    description: "Professional email templates for cover letters, follow-ups, networking, and all job communications.",
-    icon: "EnvelopeIcon",
-    href: "/email-drafting",
-    color: "from-blue-500 to-blue-600"
-  },
-  {
     title: "CV Checker",
     description: "AI-powered CV analysis with ATS scoring, keyword suggestions, and improvement tips.",
     icon: "DocumentTextIcon",
@@ -47,11 +40,11 @@ const menuItems = [
     color: "from-purple-500 to-purple-600"
   },
   {
-    title: "Interview Prep",
-    description: "Company-specific interview preparation for top MNCs with mock AI practice sessions.",
-    icon: "TagIcon",
-    href: "/interview-prep",
-    color: "from-orange-500 to-orange-600"
+    title: "Email Drafting",
+    description: "Professional email templates for cover letters, follow-ups, networking, and all job communications.",
+    icon: "EnvelopeIcon",
+    href: "/email-drafting",
+    color: "from-blue-500 to-blue-600"
   },
   {
     title: "Application Tracker",
@@ -59,6 +52,13 @@ const menuItems = [
     icon: "ChartBarIcon",
     href: "/application-tracker",
     color: "from-red-500 to-red-600"
+  },
+  {
+    title: "Interview Prep",
+    description: "Company-specific interview preparation for top MNCs with mock AI practice sessions.",
+    icon: "TagIcon",
+    href: "/interview-prep",
+    color: "from-orange-500 to-orange-600"
   },
   {
     title: "Mentorship",
@@ -74,16 +74,16 @@ export default function MasterPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-6 mb-8">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center space-x-8 mb-10">
+            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium text-lg transition-colors duration-200">
               ← Back to Home
             </Link>
             
             {/* Start Your Journey Button */}
             <Link 
               href="/jobs"
-              className="font-body inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-10 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="font-body inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Journey
             </Link>
@@ -98,48 +98,48 @@ export default function MasterPage() {
               href={item.href}
               className="group block"
             >
-              <div className="bg-white rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+              <div className="bg-white rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200">
                 {/* Icon */}
-                <div className="mb-6 text-center group-hover:scale-110 transition-transform duration-300 flex justify-center">
-                  <IconComponent iconName={item.icon} className="w-16 h-16 text-gray-600" />
+                <div className="mb-8 text-center group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                  <IconComponent iconName={item.icon} className="w-20 h-20 text-gray-600" />
                 </div>
                 
                 {/* Title */}
-                <h3 className="font-display text-2xl font-bold text-gray-900 mb-4 text-center">
+                <h3 className="font-display text-2xl font-bold text-black mb-6 text-center leading-tight">
                   {item.title}
                 </h3>
                 
                 {/* Description */}
-                <p className="font-body text-gray-600 text-center leading-relaxed">
+                <p className="font-body text-gray-800 text-center leading-relaxed text-base">
                   {item.description}
                 </p>
                 
                 {/* Gradient Border Effect */}
-                <div className={`mt-6 h-1 bg-gradient-to-r ${item.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className={`mt-8 h-1 bg-gradient-to-r ${item.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               </div>
             </Link>
           ))}
         </div>
 
         {/* Quick Stats */}
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8">
-          <h2 className="font-display text-2xl font-semibold text-gray-900 mb-6 text-center">Platform Overview</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="mt-20 bg-white rounded-2xl shadow-xl p-10">
+          <h2 className="font-display text-3xl font-semibold text-black mb-8 text-center">Platform Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="font-display text-3xl font-bold text-blue-600 mb-2">6</div>
-              <div className="font-body text-gray-600">Core Features</div>
+              <div className="font-display text-4xl font-bold text-blue-600 mb-3">6</div>
+              <div className="font-body text-black text-lg">Core Features</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-3xl font-bold text-green-600 mb-2">50+</div>
-              <div className="font-body text-gray-600">Job Opportunities</div>
+              <div className="font-display text-4xl font-bold text-green-600 mb-3">50+</div>
+              <div className="font-body text-black text-lg">Job Opportunities</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-3xl font-bold text-purple-600 mb-2">5</div>
-              <div className="font-body text-gray-600">Expert Mentors</div>
+              <div className="font-display text-4xl font-bold text-purple-600 mb-3">5</div>
+              <div className="font-body text-black text-lg">Expert Mentors</div>
             </div>
             <div className="text-center">
-              <div className="font-display text-3xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="font-body text-gray-600">AI Support</div>
+              <div className="font-display text-4xl font-bold text-orange-600 mb-3">24/7</div>
+              <div className="font-body text-black text-lg">AI Support</div>
             </div>
           </div>
         </div>

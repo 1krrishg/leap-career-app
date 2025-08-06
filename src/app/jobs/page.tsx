@@ -671,58 +671,58 @@ export default function JobsPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <Link href="/master" className="text-blue-600 hover:text-blue-800 font-medium mb-4 inline-block">
+        <div className="text-center mb-12">
+          <Link href="/master" className="text-blue-600 hover:text-blue-800 font-medium mb-6 inline-block text-lg transition-colors duration-200">
             ← Back to Master Menu
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Your Career Story</h1>
-          <p className="text-gray-600">Let&apos;s discover where your journey leads</p>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4 leading-tight">Your Career Story</h1>
+          <p className="text-xl text-gray-600 leading-relaxed">Let&apos;s discover where your journey leads</p>
         </div>
 
         {!showResults ? (
           /* Questionnaire Section */
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <div className="bg-white rounded-2xl shadow-xl p-10 mb-10">
             {/* Progress Bar */}
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-gray-700">Step {currentStep} of {questionnaireSteps.length}</span>
-                <span className="text-sm text-gray-500">{Math.round((currentStep / questionnaireSteps.length) * 100)}% Complete</span>
+            <div className="mb-10">
+              <div className="flex justify-between items-center mb-3">
+                <span className="text-base font-medium text-gray-700">Step {currentStep} of {questionnaireSteps.length}</span>
+                <span className="text-base text-gray-500">{Math.round((currentStep / questionnaireSteps.length) * 100)}% Complete</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 rounded-full h-3">
                 <div 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-500"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full transition-all duration-500"
                   style={{ width: `${(currentStep / questionnaireSteps.length) * 100}%` }}
                 ></div>
               </div>
             </div>
 
             {/* Current Question */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">{currentStepData?.question}</h2>
-              <p className="text-gray-600 mb-6 italic">&quot;{currentStepData?.story}&quot;</p>
+            <div className="mb-10">
+              <h2 className="text-3xl font-semibold text-black mb-6 leading-tight">{currentStepData?.question}</h2>
+              <p className="text-lg text-gray-800 mb-8 italic leading-relaxed">&quot;{currentStepData?.story}&quot;</p>
               
               {/* Story Response */}
               {currentStory && (
-                <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border-l-4 border-blue-500">
-                  <p className="text-gray-700 italic">&quot;{currentStory}&quot;</p>
+                <div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-gray-700 italic text-lg leading-relaxed">&quot;{currentStory}&quot;</p>
                 </div>
               )}
             </div>
 
             {/* Options */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-6 mb-10">
               {currentStepData?.options.map((option) => (
                 <button
                   key={option.value}
                   onClick={() => handleAnswer(currentStep, option.value)}
-                  className={`w-full text-left p-6 rounded-lg border-2 transition-all duration-300 ${
+                  className={`w-full text-left p-8 rounded-lg border-2 transition-all duration-300 ${
                     answers[currentStep] === option.value
-                      ? 'border-blue-500 bg-blue-50 shadow-md'
-                      : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+                      ? 'border-blue-500 bg-blue-100 shadow-md'
+                      : 'border-gray-300 hover:border-blue-400 hover:bg-gray-100'
                   }`}
                 >
-                  <h3 className="font-semibold text-gray-900 mb-2">{option.label}</h3>
-                  <p className="text-gray-600 text-sm">{option.description}</p>
+                  <h3 className="font-semibold text-black mb-3 text-lg">{option.label}</h3>
+                  <p className="text-gray-800 text-base leading-relaxed">{option.description}</p>
                 </button>
               ))}
             </div>
@@ -732,7 +732,7 @@ export default function JobsPage() {
               <button
                 onClick={prevStep}
                 disabled={currentStep === 1}
-                className="px-6 py-2 text-gray-600 hover:text-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-8 py-3 text-gray-600 hover:text-gray-800 disabled:opacity-50 disabled:cursor-not-allowed text-lg transition-colors duration-200"
               >
                 ← Previous
               </button>
@@ -740,7 +740,7 @@ export default function JobsPage() {
               <button
                 onClick={nextStep}
                 disabled={!answers[currentStep]}
-                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
               >
                 {currentStep === questionnaireSteps.length ? 'Discover My Path' : 'Next'}
               </button>
@@ -748,44 +748,44 @@ export default function JobsPage() {
           </div>
         ) : (
           /* Results Section */
-          <div className="space-y-8">
+          <div className="space-y-10">
             {/* Your Career Story */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Career Story</h2>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <div className="bg-white rounded-2xl shadow-xl p-10">
+              <h2 className="text-4xl font-bold text-black mb-8 leading-tight">Your Career Story</h2>
+              <p className="text-xl text-gray-800 mb-10 leading-relaxed">
                 Based on your answers, we&apos;ve discovered the perfect career paths that align with your personality, 
                 work style, and aspirations. Here are the roles where you&apos;re most likely to thrive and find fulfillment.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {recommendedPaths.map((path) => (
-                  <div key={path.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-gradient-to-r ${path.color}`}>
-                        <IconComponent iconName={path.icon} className="w-6 h-6 text-white" />
+                  <div key={path.id} className="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center mb-6">
+                      <div className={`w-16 h-16 rounded-full flex items-center justify-center mr-6 bg-gradient-to-r ${path.color}`}>
+                        <IconComponent iconName={path.icon} className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900">{path.title}</h3>
-                        <p className="text-gray-600">{path.description}</p>
+                        <h3 className="text-2xl font-semibold text-black mb-2">{path.title}</h3>
+                        <p className="text-gray-800 text-lg leading-relaxed">{path.description}</p>
                       </div>
                     </div>
                     
-                    <div className="mb-4">
-                      <p className="text-gray-700 italic">&quot;{path.story}&quot;</p>
+                    <div className="mb-6">
+                      <p className="text-gray-800 italic text-lg leading-relaxed">&quot;{path.story}&quot;</p>
                     </div>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <div>
-                        <span className="text-sm font-medium text-gray-500">Salary Range:</span>
-                        <p className="text-gray-900">{path.salaryRange}</p>
+                        <span className="text-base font-medium text-gray-600">Salary Range:</span>
+                        <p className="text-black text-lg">{path.salaryRange}</p>
                       </div>
                       <div>
-                        <span className="text-sm font-medium text-gray-500">Growth Potential:</span>
-                        <p className="text-gray-900">{path.growthPotential}</p>
+                        <span className="text-base font-medium text-gray-600">Growth Potential:</span>
+                        <p className="text-black text-lg">{path.growthPotential}</p>
                       </div>
                       <div>
-                        <span className="text-sm font-medium text-gray-500">Work-Life Balance:</span>
-                        <p className="text-gray-900">{path.workLifeBalance}</p>
+                        <span className="text-base font-medium text-gray-600">Work-Life Balance:</span>
+                        <p className="text-black text-lg">{path.workLifeBalance}</p>
                       </div>
                     </div>
                   </div>
@@ -804,15 +804,15 @@ export default function JobsPage() {
 
             {/* Job Platforms Section */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Job Search Platforms</h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <h2 className="text-3xl font-bold text-black mb-6">Your Job Search Platforms</h2>
+              <p className="text-lg text-gray-800 mb-8">
                 Now that we know your path, here are the best platforms to find opportunities in your chosen field. 
                 We&apos;re not a job search app - we&apos;re your guide to knowing where to look.
               </p>
               
               {/* Recommended Platforms for Your Path */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommended for Your Path</h3>
+                <h3 className="text-xl font-semibold text-black mb-4">Recommended for Your Path</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {recommendedPaths.flatMap(path => 
                     path.platforms.map(platform => {
@@ -827,8 +827,8 @@ export default function JobsPage() {
                         >
                           <IconComponent iconName={platformData.icon} className="w-6 h-6 text-blue-600" />
                           <div>
-                            <h4 className="font-semibold text-gray-900">{platformData.name}</h4>
-                            <p className="text-sm text-gray-600">{platformData.description}</p>
+                            <h4 className="font-semibold text-black">{platformData.name}</h4>
+                            <p className="text-sm text-gray-800">{platformData.description}</p>
                           </div>
                         </a>
                       ) : null;
@@ -839,7 +839,7 @@ export default function JobsPage() {
               
               {/* All Platforms by Category */}
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">All Job Platforms</h3>
+                <h3 className="text-xl font-semibold text-black mb-4">All Job Platforms</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {jobPlatforms.map((platform) => (
                     <a
@@ -851,8 +851,8 @@ export default function JobsPage() {
                     >
                       <IconComponent iconName={platform.icon} className="w-6 h-6 text-blue-600" />
                       <div>
-                        <h4 className="font-semibold text-gray-900">{platform.name}</h4>
-                        <p className="text-sm text-gray-600">{platform.description}</p>
+                        <h4 className="font-semibold text-black">{platform.name}</h4>
+                        <p className="text-sm text-gray-800">{platform.description}</p>
                         <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                           {platform.category}
                         </span>
