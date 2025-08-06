@@ -1,0 +1,72 @@
+{
+  "mentors": [
+    {
+      "id": 1,
+      "name": "Sarah Chen",
+      "role": "Senior Product Manager",
+      "company": "Google",
+      "photo": "👩‍💼",
+      "bio": "10+ years in product management with expertise in user experience and data-driven decision making. Passionate about helping early-career professionals navigate the tech industry.",
+      "specialties": ["Product Strategy", "User Research", "Data Analytics", "Team Leadership"],
+      "experience": "12 years",
+      "location": "San Francisco, CA"
+    },
+    {
+      "id": 2,
+      "name": "Marcus Rodriguez",
+      "role": "Engineering Director",
+      "company": "Microsoft",
+      "photo": "👨‍💻",
+      "bio": "Former startup founder turned engineering leader. Specializes in scaling engineering teams and mentoring developers transitioning into leadership roles.",
+      "specialties": ["Engineering Leadership", "Team Scaling", "Technical Architecture", "Startup Experience"],
+      "experience": "15 years",
+      "location": "Seattle, WA"
+    },
+    {
+      "id": 3,
+      "name": "Aisha Patel",
+      "role": "UX Design Lead",
+      "company": "Airbnb",
+      "photo": "👩‍🎨",
+      "bio": "Creative design leader with a background in psychology. Helps designers build their portfolios and transition into senior roles in the design industry.",
+      "specialties": ["UX Design", "Design Systems", "User Research", "Portfolio Building"],
+      "experience": "8 years",
+      "location": "New York, NY"
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "role": "Data Science Manager",
+      "company": "Netflix",
+      "photo": "👨‍🔬",
+      "bio": "PhD in Statistics with experience in recommendation systems and machine learning. Mentors data scientists and analysts looking to advance their careers.",
+      "specialties": ["Machine Learning", "Statistics", "Data Engineering", "Career Transition"],
+      "experience": "10 years",
+      "location": "Los Angeles, CA"
+    },
+    {
+      "id": 5,
+      "name": "Emily Thompson",
+      "role": "Marketing Director",
+      "company": "Slack",
+      "photo": "👩‍💼",
+      "bio": "Growth marketing expert with experience in B2B SaaS. Helps marketing professionals develop their skills and advance in their careers.",
+      "specialties": ["Growth Marketing", "B2B Marketing", "Brand Strategy", "Team Management"],
+      "experience": "11 years",
+      "location": "Austin, TX"
+    },
+    {
+      "id": 6,
+      "name": "Krish Goel",
+      "role": "Founder & CEO",
+      "company": "Leap",
+      "photo": "👨‍💼",
+      "bio": "Visionary entrepreneur and founder of Leap, revolutionizing career development through AI-powered tools and personalized mentorship. Passionate about empowering the next generation of professionals to leap into their dream careers.",
+      "specialties": ["Entrepreneurship", "Career Development", "AI Technology", "Product Strategy", "Leadership", "Startup Building"],
+      "experience": "8+ years",
+      "location": "San Francisco, CA",
+      "isFounder": true,
+      "featured": true
+    }
+  ]
+} 

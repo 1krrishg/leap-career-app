@@ -1,0 +1,100 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "company": "TechCorp Inc.",
+      "location": "San Francisco, CA",
+      "type": "Full-time",
+      "salary": "$80,000 - $120,000",
+      "description": "We're looking for a passionate Frontend Developer to join our team and help build amazing user experiences.",
+      "requirements": ["React", "JavaScript", "TypeScript", "CSS", "HTML"],
+      "posted": "2 days ago",
+      "logo": "💻"
+    },
+    {
+      "id": 2,
+      "title": "Data Analyst",
+      "company": "DataFlow Solutions",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$65,000 - $95,000",
+      "description": "Join our data team to analyze trends and provide insights that drive business decisions.",
+      "requirements": ["Python", "SQL", "Excel", "Tableau", "Statistics"],
+      "posted": "1 week ago",
+      "logo": "📊"
+    },
+    {
+      "id": 3,
+      "title": "Product Manager",
+      "company": "InnovateTech",
+      "location": "New York, NY",
+      "type": "Full-time",
+      "salary": "$90,000 - $130,000",
+      "description": "Lead product strategy and development for our next-generation software platform.",
+      "requirements": ["Product Management", "Agile", "User Research", "Analytics", "Leadership"],
+      "posted": "3 days ago",
+      "logo": "🎯"
+    },
+    {
+      "id": 4,
+      "title": "UX/UI Designer",
+      "company": "DesignStudio",
+      "location": "Austin, TX",
+      "type": "Full-time",
+      "salary": "$70,000 - $110,000",
+      "description": "Create beautiful and intuitive user interfaces that delight our customers.",
+      "requirements": ["Figma", "Adobe Creative Suite", "User Research", "Prototyping", "Design Systems"],
+      "posted": "5 days ago",
+      "logo": "🎨"
+    },
+    {
+      "id": 5,
+      "title": "Backend Developer",
+      "company": "CloudTech",
+      "location": "Seattle, WA",
+      "type": "Full-time",
+      "salary": "$85,000 - $125,000",
+      "description": "Build scalable backend systems and APIs that power our cloud platform.",
+      "requirements": ["Node.js", "Python", "AWS", "Docker", "MongoDB"],
+      "posted": "1 day ago",
+      "logo": "⚙️"
+    },
+    {
+      "id": 6,
+      "title": "Marketing Specialist",
+      "company": "GrowthCo",
+      "location": "Chicago, IL",
+      "type": "Full-time",
+      "salary": "$55,000 - $85,000",
+      "description": "Develop and execute marketing campaigns that drive growth and engagement.",
+      "requirements": ["Digital Marketing", "Social Media", "Google Analytics", "Content Creation", "SEO"],
+      "posted": "4 days ago",
+      "logo": "📈"
+    },
+    {
+      "id": 7,
+      "title": "DevOps Engineer",
+      "company": "InfraTech",
+      "location": "Remote",
+      "type": "Full-time",
+      "salary": "$95,000 - $140,000",
+      "description": "Manage our infrastructure and deployment pipelines to ensure reliability and scalability.",
+      "requirements": ["Kubernetes", "Docker", "AWS", "CI/CD", "Linux"],
+      "posted": "6 days ago",
+      "logo": "🔧"
+    },
+    {
+      "id": 8,
+      "title": "Business Analyst",
+      "company": "StrategyCorp",
+      "location": "Boston, MA",
+      "type": "Full-time",
+      "salary": "$70,000 - $100,000",
+      "description": "Analyze business processes and recommend improvements to drive efficiency.",
+      "requirements": ["Business Analysis", "SQL", "Excel", "Process Mapping", "Requirements Gathering"],
+      "posted": "2 weeks ago",
+      "logo": "📋"
+    }
+  ]
+} 

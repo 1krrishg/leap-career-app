@@ -1,103 +1,237 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from "next/link";
+import { 
+  BookOpenIcon,
+  AcademicCapIcon,
+  TagIcon,
+  BriefcaseIcon,
+  RocketLaunchIcon,
+  EnvelopeIcon,
+  DocumentTextIcon,
+  ChartBarIcon,
+  HandRaisedIcon
+} from '@heroicons/react/24/outline';
+
+// Helper function to render icons
+const IconComponent = ({ iconName, className = "w-6 h-6" }: { iconName: string; className?: string }) => {
+  const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    BookOpenIcon,
+    AcademicCapIcon,
+    TagIcon,
+    BriefcaseIcon,
+    RocketLaunchIcon,
+    EnvelopeIcon,
+    DocumentTextIcon,
+    ChartBarIcon,
+    HandRaisedIcon
+  };
+  
+  const Icon = iconMap[iconName];
+  return Icon ? <Icon className={className} /> : null;
+};
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [scrollY, setScrollY] = useState(0);
+  const [activeStage, setActiveStage] = useState(0);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const handleScroll = () => {
+      const scroll = window.scrollY;
+      setScrollY(scroll);
+      
+      // Calculate active stage based on scroll position
+      const stagesSection = document.getElementById('stages-section');
+      if (stagesSection) {
+        const rect = stagesSection.getBoundingClientRect();
+        const sectionHeight = rect.height;
+        const scrollProgress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / sectionHeight));
+        const stageIndex = Math.floor(scrollProgress * 5);
+        setActiveStage(Math.min(stageIndex, 4));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const timelineData = [
+    {
+      stage: "School",
+      emotion: "Dreams start here",
+      description: "Where aspirations take flight and curiosity knows no bounds",
+      icon: "BookOpenIcon",
+      color: "from-blue-400 to-blue-600"
+    },
+    {
+      stage: "College",
+      emotion: "Building skills",
+      description: "Crafting your foundation, discovering your passions",
+      icon: "AcademicCapIcon",
+      color: "from-green-400 to-green-600"
+    },
+    {
+      stage: "Graduation",
+      emotion: "Hopeful but uncertain",
+      description: "Ready to conquer the world, yet unsure of the path ahead",
+      icon: "TagIcon",
+      color: "from-purple-400 to-purple-600"
+    },
+    {
+      stage: "Job Search",
+      emotion: "Lost, frustrated, exhausted",
+      description: "Overwhelmed by applications, questioning your worth",
+      icon: "BriefcaseIcon",
+      color: "from-red-400 to-red-600"
+    },
+    {
+      stage: "Leap",
+      emotion: "Guided, focused, confident",
+      description: "Found the solution, ready to soar to new heights",
+      icon: "RocketLaunchIcon",
+      color: "from-yellow-400 to-yellow-600"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen relative overflow-hidden font-sans">
+      {/* Full-screen background with dark overlay */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
+        style={{
+          backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="%23000"/><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      {/* Dark overlay for text visibility */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      {/* Main content */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        {/* Brand Logo/Name */}
+        <div className="mb-12">
+          <div className="relative mb-6">
+            {/* Cinematic Leap Logo */}
+            <div className="flex items-center justify-center mb-6">
+              <div className="relative">
+                {/* Premium Cursive Logo */}
+                <h1 className="font-serif text-6xl md:text-8xl font-light text-white mb-3 tracking-wide italic">
+                  <span className="text-white">
+                    Leap
+                  </span>
+                </h1>
+              </div>
+            </div>
+          </div>
+          
+          <p className="font-body text-lg md:text-xl text-white font-light drop-shadow-md tracking-wide">
+            Your Career Journey, Simplified
+          </p>
+          
+          {/* Professional Tagline */}
+          <div className="mt-4 flex items-center justify-center space-x-6 text-sm text-white opacity-80 font-body">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <span>Career Development</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>Professional Growth</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <span>Success Platform</span>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Get Started Button */}
+        <div className="mb-20">
+          <Link 
+            href="/master"
+            className="font-body inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg md:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl drop-shadow-lg tracking-wide"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* Vertical Journey Stages */}
+        <div id="stages-section" className="w-full max-w-5xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mb-16 drop-shadow-lg tracking-wide">
+            Your Journey to Success
+          </h2>
+          
+          {/* Vertical Stages */}
+          <div className="space-y-10">
+            {timelineData.map((item, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-1000 ease-out ${
+                  index <= activeStage 
+                    ? 'opacity-100 transform translate-y-0' 
+                    : 'opacity-0 transform translate-y-8'
+                }`}
+              >
+                <div className="bg-black bg-opacity-40 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div className="flex items-center space-x-8">
+                    {/* Icon */}
+                    <div className={`w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ${
+                      index <= activeStage 
+                        ? `bg-gradient-to-r ${item.color} shadow-xl` 
+                        : 'bg-white bg-opacity-20'
+                    }`}>
+                      <IconComponent iconName={item.icon} className="w-12 h-12 text-white" />
+                    </div>
+                    
+                                            {/* Content */}
+                        <div className="flex-1 text-left">
+                          <h3 className="font-display text-2xl font-bold text-white mb-3 drop-shadow-md tracking-wide">
+                            {item.stage}
+                          </h3>
+                          <p className="font-body text-lg text-yellow-200 drop-shadow-md mb-4 font-medium tracking-wide">
+                            {item.emotion}
+                          </p>
+                          <p className="font-body text-gray-200 drop-shadow-md leading-relaxed tracking-wide">
+                            {item.description}
+                          </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="mt-20 w-full max-w-5xl">
+          <h3 className="font-display text-2xl font-semibold text-white mb-8 tracking-wide">Explore Our Features</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <Link href="/jobs" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+              <IconComponent iconName="BriefcaseIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-medium tracking-wide">Job Matching</p>
+            </Link>
+            <Link href="/cv-checker" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+              <IconComponent iconName="DocumentTextIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-medium tracking-wide">CV Checker</p>
+            </Link>
+            <Link href="/interview-prep" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+              <IconComponent iconName="TagIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-medium tracking-wide">Interview Prep</p>
+            </Link>
+            <Link href="/application-tracker" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+              <IconComponent iconName="ChartBarIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-medium tracking-wide">Application Tracker</p>
+            </Link>
+            <Link href="/mentorship" className="bg-black bg-opacity-40 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20 hover:bg-opacity-60 transition-all">
+              <IconComponent iconName="HandRaisedIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-medium tracking-wide">Mentorship</p>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
