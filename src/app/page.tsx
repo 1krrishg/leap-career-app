@@ -116,7 +116,7 @@ export default function Home() {
               <div className="relative">
                 {/* Premium Cursive Logo */}
                 <h1 className="font-serif text-6xl md:text-8xl font-light text-white mb-3 tracking-wide italic">
-                  <span className="text-white">
+                  <span className="text-white relative top-4">
                     Leap
                   </span>
                 </h1>
@@ -205,7 +205,7 @@ export default function Home() {
         {/* Quick Navigation */}
         <div className="mt-20 w-full max-w-5xl">
           <h3 className="font-display text-2xl font-semibold text-white mb-8 tracking-wide">Explore Our Features</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <Link href="/jobs" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="BriefcaseIcon" className="w-8 h-8 text-white mb-3" />
               <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Job Matching</p>
@@ -225,6 +225,10 @@ export default function Home() {
             <Link href="/mentorship" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
               <IconComponent iconName="HandRaisedIcon" className="w-8 h-8 text-white mb-3" />
               <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Mentorship</p>
+            </Link>
+            <Link href="/email-drafting" className="bg-black bg-opacity-70 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-30 hover:bg-opacity-90 transition-all shadow-lg">
+              <IconComponent iconName="EnvelopeIcon" className="w-8 h-8 text-white mb-3" />
+              <p className="font-body text-white text-sm font-semibold tracking-wide drop-shadow-md">Email Drafting</p>
             </Link>
           </div>
         </div>

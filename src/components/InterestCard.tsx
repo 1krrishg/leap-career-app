@@ -118,7 +118,8 @@ export default function InterestCard({ onClose, className = '' }: InterestCardPr
 
           <div className="flex gap-2">
             <button
-              type="submit"
+              type="button"
+              onClick={() => window.open('https://wa.me/+9779813078299', '_blank')}
               className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-all"
             >
               Stay Updated

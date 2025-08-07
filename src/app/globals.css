@@ -26,6 +26,21 @@ body {
   font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
+/* Form Input Styling */
+input, textarea, select {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
 /* Professional Typography Classes */
 .font-display {
   font-family: 'Poppins', sans-serif;
@@ -38,3 +53,5 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+
+

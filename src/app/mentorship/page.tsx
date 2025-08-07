@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 // Using Unicode symbols instead of Heroicons for now
 
@@ -127,6 +128,16 @@ export default function MentorshipPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
+      {/* Navigation */}
+      <div className="max-w-7xl mx-auto px-4 pt-6">
+        <Link 
+          href="/master"
+          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg transition-colors duration-200 mb-4"
+        >
+          ← Back to Master Page
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>

@@ -109,7 +109,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Startups', 'Tech Giants', 'Consulting Firms', 'Banks', 'Product Companies'],
     skills: ['Programming', 'Problem Solving', 'System Design', 'Collaboration', 'Continuous Learning'],
     platforms: ['LinkedIn', 'Indeed', 'AngelList', 'Stack Overflow Jobs', 'GitHub Jobs', 'Hired', 'Triplebyte', 'LeetCode Jobs'],
-    salaryRange: '₹6,00,000 - ₹25,00,000+',
+    salaryRange: '₹4,00,000 - ₹15,00,000+',
     growthPotential: 'High - Rapid advancement to senior roles',
     workLifeBalance: 'Moderate - Can be demanding but flexible',
     story: "You're the architect of the digital world, turning ideas into reality through code. Every line you write has the power to impact millions of lives."
@@ -124,7 +124,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Tech Companies', 'Banks', 'Consulting Firms', 'Startups', 'Research Labs'],
     skills: ['Statistics', 'Machine Learning', 'Python/R', 'Data Visualization', 'Business Acumen'],
     platforms: ['LinkedIn', 'Indeed', 'Kaggle Jobs', 'Data Science Central', 'Analytics Vidhya', 'DataJobs', 'AI Jobs', 'ML Jobs'],
-    salaryRange: '₹8,00,000 - ₹30,00,000+',
+    salaryRange: '₹5,00,000 - ₹18,00,000+',
     growthPotential: 'Very High - AI/ML boom creating demand',
     workLifeBalance: 'Good - Often remote-friendly',
     story: "You're the detective of the digital age, uncovering hidden patterns in data that others can't see. Your insights shape the future of business."
@@ -139,7 +139,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Product Companies', 'Startups', 'Tech Giants', 'Consulting', 'Banks'],
     skills: ['Strategic Thinking', 'User Research', 'Data Analysis', 'Leadership', 'Communication'],
     platforms: ['LinkedIn', 'Indeed', 'AngelList', 'Product Hunt Jobs', 'Mind the Product', 'Product School', 'ProductCraft'],
-    salaryRange: '₹10,00,000 - ₹35,00,000+',
+    salaryRange: '₹6,00,000 - ₹20,00,000+',
     growthPotential: 'High - Path to VP/CPO roles',
     workLifeBalance: 'Moderate - High responsibility but good work-life balance',
     story: "You're the conductor of the product orchestra, harmonizing user needs, business goals, and technical capabilities to create something magical."
@@ -154,7 +154,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Big 4', 'MBB', 'Boutique Firms', 'Tech Consulting', 'Strategy Houses'],
     skills: ['Problem Solving', 'Communication', 'Analytics', 'Client Management', 'Strategic Thinking'],
     platforms: ['LinkedIn', 'Indeed', 'Consulting.com', 'Management Consulted', 'Vault', 'Consulting Careers', 'Strategy&'],
-    salaryRange: '₹12,00,000 - ₹40,00,000+',
+    salaryRange: '₹8,00,000 - ₹25,00,000+',
     growthPotential: 'Very High - Fast-track to leadership',
     workLifeBalance: 'Challenging - High travel and long hours',
     story: "You're the trusted advisor to CEOs and executives, solving their most complex challenges and shaping the future of organizations."
@@ -169,7 +169,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Banks', 'Investment Firms', 'Startups', 'Consulting', 'Corporates'],
     skills: ['Financial Modeling', 'Excel', 'Analytics', 'Risk Management', 'Market Knowledge'],
     platforms: ['LinkedIn', 'Indeed', 'eFinancialCareers', 'Wall Street Oasis', 'Finance Jobs', 'eFinancialCareers', 'Toptal Finance'],
-    salaryRange: '₹8,00,000 - ₹50,00,000+',
+    salaryRange: '₹6,00,000 - ₹25,00,000+',
     growthPotential: 'High - Clear progression paths',
     workLifeBalance: 'Varies - Investment banking is demanding',
     story: "You're the guardian of capital, making strategic decisions that move markets and create wealth for individuals and institutions."
@@ -184,7 +184,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Hospitals', 'Pharma Companies', 'Startups', 'Research Labs', 'Consulting'],
     skills: ['Medical Knowledge', 'Research', 'Patient Care', 'Technology', 'Communication'],
     platforms: ['LinkedIn', 'Indeed', 'Doximity', 'PracticeLink', 'Health eCareers', 'Medscape', 'Physician Jobs'],
-    salaryRange: '₹15,00,000 - ₹50,00,000+',
+    salaryRange: '₹8,00,000 - ₹30,00,000+',
     growthPotential: 'Very High - Healthcare is growing rapidly',
     workLifeBalance: 'Varies - Can be demanding but rewarding',
     story: "You're the healer of tomorrow, combining medical expertise with technology to save lives and improve human health."
@@ -199,7 +199,7 @@ const careerPaths: CareerPath[] = [
     companyTypes: ['Design Agencies', 'Tech Companies', 'Startups', 'Creative Studios', 'Corporates'],
     skills: ['Visual Design', 'User Experience', 'Prototyping', 'User Research', 'Creativity'],
     platforms: ['LinkedIn', 'Indeed', 'Behance Jobs', 'Dribbble Jobs', 'AIGA', 'Design Jobs', 'Creative Market'],
-    salaryRange: '₹6,00,000 - ₹20,00,000+',
+    salaryRange: '₹4,00,000 - ₹15,00,000+',
     growthPotential: 'High - Design is increasingly valued',
     workLifeBalance: 'Good - Often flexible and creative',
     story: "You're the artist of the digital age, crafting experiences that delight users and solve real problems through beautiful design."
@@ -359,6 +359,68 @@ const questionnaireSteps: QuestionnaireStep[] = [
         label: 'Remote or distributed teams with global opportunities',
         description: 'You want the flexibility to work from anywhere with global opportunities',
         story: "You're not bound by geography. You want to work with the best people, regardless of where they are in the world."
+      }
+    ]
+  },
+  {
+    id: 6,
+    question: "How do you prefer to learn and grow in your career?",
+    story: "Think about what keeps you motivated and engaged in your professional development.",
+    options: [
+      {
+        value: 'hands-on-experience',
+        label: 'Learning by doing - real projects and challenges',
+        description: 'You learn best through practical experience and trial-and-error',
+        story: "You thrive when you can dive into real problems and figure things out as you go. Every challenge is an opportunity to grow."
+      },
+      {
+        value: 'structured-learning',
+        label: 'Formal training, certifications, and structured programs',
+        description: 'You prefer systematic learning with clear milestones and recognition',
+        story: "You appreciate the structure and validation that comes with formal education. Certifications and degrees give you confidence."
+      },
+      {
+        value: 'mentorship-guidance',
+        label: 'Learning from experienced mentors and coaches',
+        description: 'You value personal guidance and wisdom from those who have walked the path',
+        story: "You believe the best learning comes from those who have been there. A good mentor can accelerate your growth exponentially."
+      },
+      {
+        value: 'self-directed-research',
+        label: 'Independent research and self-directed learning',
+        description: 'You enjoy exploring topics deeply on your own terms',
+        story: "You love diving deep into topics that interest you. You're comfortable charting your own learning path."
+      }
+    ]
+  },
+  {
+    id: 7,
+    question: "What kind of impact do you want to have in your career?",
+    story: "Imagine looking back on your career in 10 years. What would make you proud?",
+    options: [
+      {
+        value: 'technical-innovation',
+        label: 'Building innovative technology that changes the world',
+        description: 'You want to create breakthrough solutions that solve real problems',
+        story: "You dream of building something that millions of people use. Technology is your canvas for making a difference."
+      },
+      {
+        value: 'business-growth',
+        label: 'Driving business growth and organizational success',
+        description: 'You want to help companies scale and achieve their goals',
+        story: "You see yourself as a key player in a company's success story. Your work directly impacts the bottom line."
+      },
+      {
+        value: 'people-development',
+        label: 'Developing and mentoring others to reach their potential',
+        description: 'You want to help people grow and succeed in their careers',
+        story: "Your greatest satisfaction comes from seeing others succeed. You're a natural teacher and coach."
+      },
+      {
+        value: 'social-impact',
+        label: 'Creating positive social change and helping communities',
+        description: 'You want your work to benefit society and make the world better',
+        story: "You measure success by the lives you touch and the communities you help. Purpose drives everything you do."
       }
     ]
   }
@@ -676,7 +738,23 @@ export default function JobsPage() {
             ← Back to Master Menu
           </Link>
           <h1 className="text-5xl font-bold text-gray-900 mb-4 leading-tight">Your Career Story</h1>
-          <p className="text-xl text-gray-600 leading-relaxed">Let&apos;s discover where your journey leads</p>
+          <p className="text-xl text-gray-600 leading-relaxed mb-6">Let&apos;s discover where your journey leads</p>
+          
+          {/* Interactive Progress Indicator */}
+          <div className="flex items-center justify-center space-x-2 mb-8">
+            {questionnaireSteps.map((_, index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index < currentStep - 1 
+                    ? 'bg-green-500' 
+                    : index === currentStep - 1 
+                    ? 'bg-blue-500 animate-pulse' 
+                    : 'bg-gray-300'
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {!showResults ? (
@@ -711,18 +789,34 @@ export default function JobsPage() {
 
             {/* Options */}
             <div className="space-y-6 mb-10">
-              {currentStepData?.options.map((option) => (
+              {currentStepData?.options.map((option, index) => (
                 <button
                   key={option.value}
                   onClick={() => handleAnswer(currentStep, option.value)}
-                  className={`w-full text-left p-8 rounded-lg border-2 transition-all duration-300 ${
+                  className={`w-full text-left p-8 rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${
                     answers[currentStep] === option.value
-                      ? 'border-blue-500 bg-blue-100 shadow-md'
-                      : 'border-gray-300 hover:border-blue-400 hover:bg-gray-100'
+                      ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg'
+                      : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'
                   }`}
                 >
-                  <h3 className="font-semibold text-black mb-3 text-lg">{option.label}</h3>
-                  <p className="text-gray-800 text-base leading-relaxed">{option.description}</p>
+                  <div className="flex items-start space-x-4">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                      answers[currentStep] === option.value
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-200 text-gray-600'
+                    }`}>
+                      {index + 1}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-black mb-3 text-lg">{option.label}</h3>
+                      <p className="text-gray-800 text-base leading-relaxed mb-4">{option.description}</p>
+                      {answers[currentStep] === option.value && (
+                        <div className="bg-blue-100 rounded-lg p-3 border-l-4 border-blue-500">
+                          <p className="text-blue-800 text-sm italic">&quot;{option.story}&quot;</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </button>
               ))}
             </div>
@@ -811,52 +905,71 @@ export default function JobsPage() {
               </p>
               
               {/* Recommended Platforms for Your Path */}
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-black mb-4">Recommended for Your Path</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {recommendedPaths.flatMap(path => 
-                    path.platforms.map(platform => {
-                      const platformData = jobPlatforms.find(p => p.name === platform);
-                      return platformData ? (
-                        <a
-                          key={platform}
-                          href={platformData.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-300"
-                        >
+              <div className="mb-10">
+                <h3 className="text-xl font-semibold text-black mb-6 flex items-center">
+                  <span className="text-2xl mr-2">🎯</span>
+                  Recommended for Your Path
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {Array.from(new Set(recommendedPaths.flatMap(path => path.platforms))).map(platform => {
+                    const platformData = jobPlatforms.find(p => p.name === platform);
+                    return platformData ? (
+                      <a
+                        key={`recommended-${platform}`}
+                        href={platformData.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-blue-50 to-indigo-50"
+                      >
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
                           <IconComponent iconName={platformData.icon} className="w-6 h-6 text-blue-600" />
-                          <div>
-                            <h4 className="font-semibold text-black">{platformData.name}</h4>
-                            <p className="text-sm text-gray-800">{platformData.description}</p>
-                          </div>
-                        </a>
-                      ) : null;
-                    })
-                  ).filter(Boolean)}
+                        </div>
+                        <h4 className="font-semibold text-black mb-2">{platformData.name}</h4>
+                        <p className="text-sm text-gray-600 leading-relaxed">{platformData.description}</p>
+                      </a>
+                    ) : null;
+                  }).filter(Boolean)}
                 </div>
               </div>
               
               {/* All Platforms by Category */}
               <div>
-                <h3 className="text-xl font-semibold text-black mb-4">All Job Platforms</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {jobPlatforms.map((platform) => (
+                <h3 className="text-xl font-semibold text-black mb-6 flex items-center">
+                  <span className="text-2xl mr-2">🌐</span>
+                  All Job Platforms by Category
+                </h3>
+                
+                {/* Category Tabs */}
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
+                    {['All', 'Tech', 'Data Science', 'Product', 'Consulting', 'Finance', 'Professional', 'Startup', 'General'].map(category => (
+                      <button
+                        key={category}
+                        className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {jobPlatforms.map((platform, index) => (
                     <a
-                      key={platform.name}
+                      key={`all-${platform.name}-${index}`}
                       href={platform.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-300"
+                      className="flex flex-col items-center text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-300"
                     >
-                      <IconComponent iconName={platform.icon} className="w-6 h-6 text-blue-600" />
-                      <div>
-                        <h4 className="font-semibold text-black">{platform.name}</h4>
-                        <p className="text-sm text-gray-800">{platform.description}</p>
-                        <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                          {platform.category}
-                        </span>
+                      <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mb-3">
+                        <IconComponent iconName={platform.icon} className="w-5 h-5 text-gray-600" />
                       </div>
+                      <h4 className="font-semibold text-black text-sm mb-1">{platform.name}</h4>
+                      <p className="text-xs text-gray-600 mb-2 leading-relaxed">{platform.description}</p>
+                      <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                        {platform.category}
+                      </span>
                     </a>
                   ))}
                 </div>
